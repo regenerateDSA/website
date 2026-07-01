@@ -3,6 +3,7 @@
 import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import keystatic from '@keystatic/astro';
+import cloudflare from '@astrojs/cloudflare';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
@@ -10,6 +11,7 @@ import { defineConfig, fontProviders } from 'astro/config';
 export default defineConfig({
 	site: 'https://regeneratedsa.com',
 	integrations: [mdx(), react(), sitemap(), keystatic()],
+	adapter: cloudflare(),
 	fonts: [
 		{
 			provider: fontProviders.local(),
