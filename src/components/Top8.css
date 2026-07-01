@@ -1,0 +1,52 @@
+.top8 {
+    /* A grid that containains a list of the top8 orgs on desktop, and a hotizontal (fitting) list on mobile */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* gap: 1em; */
+    /* margin: 1em 0; */
+}
+
+.top8-entry {
+    display: block;
+    /* width: 200px; */
+    /* min-height: 200px; */
+    height: 40%;
+    /* max-height: fit-content; */
+    background-color: var(--key-color);
+    border: dashed 1px var(--yellow);
+    margin: 1em;
+    padding: 0.2em;
+    
+    color: contrast-color(var(--key-color));
+}
+
+.top8-entry img {
+    /* height: 95%; */
+    height
+    border-radius: 0px;
+    /* align center */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top8-entry h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin: 0.5em 0;
+    color: contrast-color(var(--key-color));
+}
+
+.top8-entry p {
+    font-size: 1rem;
+    text-align: right;
+    margin: 0em 0;
+    color: contrast-color(var(--key-color));
+}
+
+.top8-entry summary {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+    color: contrast-color(var(--key-color));
+}

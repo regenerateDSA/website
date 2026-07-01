@@ -1,0 +1,15 @@
+---
+import { getEntry, render } from "astro:content";
+const entry = (await getEntry("pointsOfUnity", "index")) ?? {
+    id: "index",
+    slug: "index",
+    body: "<p>Content not found.</p>",
+    collection: "pointsOfUnity",
+    data: { title: "Points of Unity", lastAmended: new Date() },
+};
+const { Content } = await render(entry);
+---
+<p>Hey </p>
+<p>{entry.data.title}</p>
+<p>{entry.data.lastAmended}</p>
+<Content />

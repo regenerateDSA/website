@@ -1,0 +1,26 @@
+---
+import "./Top8.css";
+
+import { getCollection, render } from "astro:content";
+const top8 = await getCollection("top8");
+// console.log(top8);
+---
+
+<h2>Our Friends</h2>
+
+<div class="top8">
+    {
+        top8.map((entry) => {
+            return (
+                <div class="top8-entry" style={`--key-color: ${entry.data.color}`}>
+                    <h3>{entry.data.organization}</h3>
+                    <img src={entry.data.logo} alt={entry.data.organization} />
+                    <details>
+                        <summary>Why {entry.data.organization}?</summary>
+                        <p>{entry.data.why}</p>
+                    </details>
+                </div>
+            );
+        })
+    }
+</div>
