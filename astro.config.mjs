@@ -1,13 +1,14 @@
 // @ts-check
 
 import mdx from '@astrojs/mdx';
+import keystatic from '@keystatic/astro';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig, fontProviders } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://regeneratedsa.com',
-	integrations: [mdx(), sitemap()],
+	integrations: [keystatic(), mdx(), sitemap()],
 	fonts: [
 		{
 			provider: fontProviders.local(),
